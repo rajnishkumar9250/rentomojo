@@ -1,0 +1,49 @@
+set github client id and secret id in github.json file
+
+Start server - 
+go to project main directory and run below command
+npm start
+
+Url for host:
+
+http://localhost:3000
+
+1.) api  for create a post 
+
+url - /post/create
+method - post
+body : {
+  "post":"hii",
+  "userid": userid
+}
+
+
+
+2.) api for add comment 
+
+url - /post/reply
+method - post
+body : {
+  "post":"hii",
+  "userid": "5ce90cb049e7d1190b4b06f7",
+  "postId": "5ce9145b81174824558dc38e"
+}
+
+3.) api for reply to reply
+url - /post/reply
+method - post
+
+body :{
+  "post":"hii",
+  "userid": "5ce90cb049e7d1190b4b06f7",
+  "postId": "5ce9145b81174824558dc38e",
+  "commentId":"5ce915b1f70753263493fb1d"
+}
+
+4.) api for edit -
+url - /post/edit
+method - put
+body:{
+    comment: "editing my previous comment",
+    commentId: 5ce915b1f70753263493fb1d
+}
